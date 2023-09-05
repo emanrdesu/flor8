@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 
+	import flower from '$lib/image/flor3.png';
 	let judge = false;
 	let answer = false;
 
@@ -16,7 +17,7 @@
 	<div class="hero-content text-center">
 		<div class="max-w-lg flex flex-col gap-6">
 			<div class="flex items-center">
-				<img class="img w-64" alt="flower" src="/src/lib/image/flor3.png" />
+				<img class="img w-64" alt="flower" src={flower} />
 				<div class="flex flex-col gap-8 items-center">
 					<h1 class="text-5xl font-bold">La flor de maldád</h1>
 					<span class="flex gap-4 items-center">
