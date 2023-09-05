@@ -17,11 +17,11 @@
 	<div class="hero-content text-center">
 		<div class="max-w-lg flex flex-col gap-6">
 			<div class="flex items-center">
-				<img class="img w-64" alt="flower" src={flower} />
+				<img class="img w-48" alt="flower" src={flower} />
 				<div class="flex flex-col gap-8 items-center">
-					<h1 class="text-5xl font-bold">La flor de maldád</h1>
+					<h1 class="text-4xl font-bold">La flor de maldád</h1>
 					<span class="flex gap-4 items-center">
-						<button on:click={respuesta} class="btn btn-sm w-min btn-info">Dice...</button>
+						<button on:click={respuesta} class="btn btn-sm w-min btn-primary">Dice...</button>
 
 						{#if judge}
 							<div
