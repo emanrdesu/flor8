@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-scrollbar {
+	width: 0;
+	background: transparent;
+}
+
+::-moz-scrollbar {
+	width: 0;
+	background: transparent;
+}
+::-o-scrollbar {
+	width: 0;
+	background: transparent;
+}
+::-ms-scrollbar {
+	width: 0;
+	background: transparent;
+}
+::-scrollbar {
+	width: 0;
+	background: transparent;
+}
