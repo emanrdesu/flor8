@@ -4,6 +4,7 @@
 	import flower from '$lib/image/flor3.png';
 	import { tick } from 'svelte';
 	import { browser } from '$app/environment';
+	import { dynamify, allAnswers } from '$lib/dynamify';
 
 	let messages = [] as string[];
 	let answers = [] as string[];
@@ -13,35 +14,9 @@
 	let inputBox = null as any as HTMLInputElement;
 	let submitButton = null as any as HTMLButtonElement;
 
-	let allAnswers = [
-		'Óbvio que si.',
-		'Bafff, claro que si.',
-		'Sin duda.',
-		'Si, definitivo.',
-		'Puedes asegurarte en eso. ',
-
-		'Como yo veo, si.',
-		'Probabilidád de 90% que si.',
-		'Paréce que si.',
-		'Sip.',
-		'Mis pétalos dícen: Siiii.',
-
-		'Todavía no puedes saber.',
-		'Pregúntame despues.',
-		'No debería decirte ahora.',
-		'Mis pétalos descánsan, ahora no.',
-		'Pregúntame algo differente.',
-
-		'Probabilidád de 70% que no.',
-		'Mi respuesta es: NO.',
-		'Mis petalos dícen: Noooo.',
-		'No, definitívo NO.',
-		'Lo dudo.'
-	];
-
 	function respuesta(): string {
 		const index = Math.floor(Math.random() * 100) % allAnswers.length;
-		return allAnswers[index];
+		return dynamify(index);
 	}
 
 	async function submitQuestion() {
